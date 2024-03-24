@@ -1,0 +1,83 @@
+/* CSS (styles.css) */
+
+body {
+  background-color: #2b2b2b; /* Dark grey background */
+  color: #fff; /* White text */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #383838; /* Slightly lighter grey background */
+  border: 1px solid #999; /* Light grey border */
+  border-radius: 10px; /* Rounded corners */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+button {
+  margin-bottom: 10px;
+  background-color: #1d1d1d; /* Darker grey input background */
+  color: #fff; /* White text */
+  border: 1px solid #3a3a3a; /* Dark grey border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+}
+
+#inventoryList {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Set a fixed width for the table cells */
+td.editable {
+  max-width: 150px; /* Adjust the maximum width as needed */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: pre-wrap; /* Allow text to wrap to a new line */
+  word-wrap: break-word; /* Break words that exceed the maximum width */
+}
+
+th, td {
+  border: 1px solid #ffffff; /* Dark grey border */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f1f1f; /* Dark grey background for table header */
+}
+
+tr:nth-child(even) {
+  background-color: #555; /* Darker grey background for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: #666; /* Slightly lighter grey background for odd rows */
+}
+
+.delete-button {
+  background-color: #c00; /* Red background for delete button */
+  color: #fff; /* White text */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #900; /* Darker red on hover */
+}
