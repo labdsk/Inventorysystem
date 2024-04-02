@@ -1,17 +1,22 @@
 /* CSS (styles.css) */
 
 body {
-  background-color: #74b46f; /* Dark grey background */
+  font-family: sans-serif; /* Use Arial font for the body text */
+  background-color: #1b1b1b; /* Dark grey background */
   color: #fff; /* White text */
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #383838; /* Slightly lighter grey background */
+  background-color: rgba(56, 56, 56, 0.6); /* Slightly transparent grey background */
   border: 1px solid #999; /* Light grey border */
   border-radius: 10px; /* Rounded corners */
+}
+
+.container h1 {
+  font-size: 25px; /* Adjust the font size as needed */
 }
 
 label {
@@ -21,7 +26,7 @@ label {
 
 input,
 button {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   background-color: #1d1d1d; /* Darker grey input background */
   color: #fff; /* White text */
   border: 1px solid #3a3a3a; /* Dark grey border */
@@ -29,12 +34,58 @@ button {
   padding: 5px 10px;
 }
 
-button[type="submit"] {
-  cursor: pointer;
+input#quantity,
+td.editable[data-field="quantity"] input {
+    outline: 1px solid rgb(39, 39, 39); /* Adjust the color and width as needed */
+}
+input#itemName,
+td.editable[data-field="quantity"] input {
+    outline: 1px solid rgb(39, 39, 39); /* Adjust the color and width as needed */
+}
+
+/* Quantity input */
+td.editable[data-field="quantity"] input {
+  outline: 1px solid rgb(112, 216, 15); /* Adjust the color and width as needed */
+  max-width: 40px; /* Ensure the input fills its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  padding: 6px; /* Adjust padding as needed */
+  margin: 10; /* Remove default margin */
+}
+
+/* itemName input */
+td.editable[data-field="itemName"] input {
+  padding: 6px; /* Adjust padding as needed */
+  max-width: 180px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+/* report input */
+td.editable[data-field="report"] input {
+  padding: 6px; /* Adjust padding as needed */
+  max-width: 180px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+/* note input */
+td.editable[data-field="note"] input {
+  padding: 6px; /* Adjust padding as needed */
+  max-width: 180px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+button:hover {
+  background-color: #3a3a3a; /* Darker background on hover for all buttons */
+  color: #ebebeb; /* White text */
+  outline: 2px solid rgb(44, 44, 44); /* This sets the outline to black with 2px width */
 }
 
 #inventoryList {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 table {
@@ -42,9 +93,26 @@ table {
   border-collapse: collapse;
 }
 
+td.editable[data-field="quantity"] {
+  max-width: 50px; /* Adjust the maximum width as needed */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: pre-wrap; /* Allow text to wrap to a new line */
+  word-wrap: break-word; /* Break words that exceed the maximum width */
+  text-align: center; /* Center the text horizontally */
+}
+
 /* Set a fixed width for the table cells */
 td.editable {
-  max-width: 150px; /* Adjust the maximum width as needed */
+  max-width: 50px; /* Adjust the maximum width as needed */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: pre-wrap; /* Allow text to wrap to a new line */
+  word-wrap: break-word; /* Break words that exceed the maximum width */
+}
+
+td.deleted-item {
+  max-width: 100px; /* Adjust the maximum width as needed */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis for overflow text */
   white-space: pre-wrap; /* Allow text to wrap to a new line */
@@ -52,9 +120,13 @@ td.editable {
 }
 
 th, td {
-  border: 1px solid #ffffff; /* Dark grey border */
+  border: 1px solid #888888; /* Dark grey border */
   padding: 8px;
   text-align: left;
+}
+
+#inventoryList th:nth-child(3), #deletedItemList th:nth-child(2) {
+  text-align: center;
 }
 
 th {
@@ -62,22 +134,28 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #555; /* Darker grey background for even rows */
+  background-color:rgba(59, 59, 59, 0.8); /* Darker grey background for even rows */
 }
 
 tr:nth-child(odd) {
-  background-color: #666; /* Slightly lighter grey background for odd rows */
+  background-color:rgba(71, 71, 71, 0.8); /* Slightly lighter grey background for odd rows */
 }
 
 .delete-button {
-  background-color: #c00; /* Red background for delete button */
+  background-color: rgb(216, 0, 0); /* Red background for delete button */
   color: #fff; /* White text */
   border: none;
-  padding: 5px 10px;
   border-radius: 5px; /* Rounded corners */
   cursor: pointer;
+  display: block; /* Change display to block to apply flexbox */
+  margin: 0 auto; /* Auto margin to center horizontally */
+  text-align: center; /* Center align the text within the button */
 }
-
 .delete-button:hover {
   background-color: #900; /* Darker red on hover */
+  color: #636363; /* White text */
+}
+
+.hidden {
+  display: none;
 }
