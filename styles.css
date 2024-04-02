@@ -95,7 +95,7 @@ table {
 }
 
 td.editable[data-field="quantity"] {
-  max-width: 50px; /* Adjust the maximum width as needed */
+  max-width: 0px; /* Adjust the maximum width as needed */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis for overflow text */
   white-space: pre-wrap; /* Allow text to wrap to a new line */
@@ -105,7 +105,7 @@ td.editable[data-field="quantity"] {
 
 /* Set a fixed width for the table cells */
 td.editable {
-  max-width: 50px; /* Adjust the maximum width as needed */
+  max-width: 0px; /* Adjust the maximum width as needed */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis for overflow text */
   white-space: pre-wrap; /* Allow text to wrap to a new line */
