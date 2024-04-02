@@ -79,6 +79,11 @@ td.editable[data-field="note"] input {
   border-collapse: collapse;
 }
 
+/* note input */
+td.editable[data-field="note"] {
+  width: 25%;
+}
+
 button:hover {
   background-color: #3a3a3a; /* Darker background on hover for all buttons */
   color: #ebebeb; /* White text */
